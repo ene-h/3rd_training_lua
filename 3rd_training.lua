@@ -175,6 +175,7 @@ stick_gesture = {
   --"guard forward jump",
   "Shun Goku Satsu", -- Gouki hidden SA1
   "Kongou Kokuretsu Zan", -- Gouki hidden SA2
+  "Chun EX Legs",
 }
 if is_4rd_strike then
   table.insert(stick_gesture, "Demon Armageddon") -- Gouki SA3
@@ -325,6 +326,8 @@ function make_input_sequence(_stick, _button)
   elseif  _stick == "Shun Goku Satsu" then _sequence = { { "LP" }, {}, {}, { "LP" }, { "forward" }, {"LK"}, {}, { "HP" } }
     return _sequence
   elseif  _stick == "Kongou Kokuretsu Zan" then _sequence = { { "down" }, {}, { "down" }, {}, { "down", "LP", "MP", "HP" } }
+    return _sequence
+  elseif  _stick == "Chun EX Legs" then _sequence = { { "MK", "HK" }, {}, { "MK", "HK" }, {}, { "MK", "HK" }, {}, { "MK", "HK" }, {}, { "MK", "HK" }, {} }
     return _sequence
   elseif  _stick == "Demon Armageddon" then _sequence = { { "up" }, {}, { "up" }, {}, { "up", "LK", "MK" } }
     return _sequence
